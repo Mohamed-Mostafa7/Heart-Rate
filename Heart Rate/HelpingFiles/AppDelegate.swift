@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import HealthKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let healthStore = HKHealthStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Request authorization for HealthKit
+            let typesToRead = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
+            healthStore.requestAuthorization(toShare: nil, read: typesToRead) { (success, error) in
+                if success {
+                    print("HealthKit Authorization successful!")
+                } else {
+                    print("HealthKit Authorization failed!")
+                }
+            }
         return true
     }
 

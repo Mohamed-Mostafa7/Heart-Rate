@@ -13,6 +13,8 @@
 		E943C8FC2A1C391D0090DFC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E943C8FA2A1C391D0090DFC4 /* Main.storyboard */; };
 		E943C8FE2A1C391F0090DFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E943C8FD2A1C391F0090DFC4 /* Assets.xcassets */; };
 		E943C9012A1C391F0090DFC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E943C8FF2A1C391F0090DFC4 /* LaunchScreen.storyboard */; };
+		E943C90E2A1C41E10090DFC4 /* Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E943C90D2A1C41E10090DFC4 /* Heart.swift */; };
+		E943C9122A1C449A0090DFC4 /* HeartCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E943C9112A1C449A0090DFC4 /* HeartCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		E943C8FD2A1C391F0090DFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E943C9002A1C391F0090DFC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E943C9022A1C391F0090DFC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E943C90C2A1C3EA00090DFC4 /* Heart Rate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Heart Rate.entitlements"; sourceTree = "<group>"; };
+		E943C90D2A1C41E10090DFC4 /* Heart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heart.swift; sourceTree = "<group>"; };
+		E943C9112A1C449A0090DFC4 /* HeartCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +61,50 @@
 		E943C8F32A1C391D0090DFC4 /* Heart Rate */ = {
 			isa = PBXGroup;
 			children = (
-				E943C8F42A1C391D0090DFC4 /* AppDelegate.swift */,
-				E943C8F62A1C391D0090DFC4 /* SceneDelegate.swift */,
-				E943C8F82A1C391D0090DFC4 /* ViewController.swift */,
-				E943C8FA2A1C391D0090DFC4 /* Main.storyboard */,
-				E943C8FD2A1C391F0090DFC4 /* Assets.xcassets */,
-				E943C8FF2A1C391F0090DFC4 /* LaunchScreen.storyboard */,
+				E943C9102A1C41FE0090DFC4 /* Controller */,
+				E943C90F2A1C41F00090DFC4 /* Model */,
+				E943C90B2A1C3E7F0090DFC4 /* Views */,
+				E943C90A2A1C3E510090DFC4 /* HelpingFiles */,
+				E943C90C2A1C3EA00090DFC4 /* Heart Rate.entitlements */,
 				E943C9022A1C391F0090DFC4 /* Info.plist */,
 			);
 			path = "Heart Rate";
+			sourceTree = "<group>";
+		};
+		E943C90A2A1C3E510090DFC4 /* HelpingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E943C8F42A1C391D0090DFC4 /* AppDelegate.swift */,
+				E943C8F62A1C391D0090DFC4 /* SceneDelegate.swift */,
+				E943C8FD2A1C391F0090DFC4 /* Assets.xcassets */,
+			);
+			path = HelpingFiles;
+			sourceTree = "<group>";
+		};
+		E943C90B2A1C3E7F0090DFC4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E943C8FA2A1C391D0090DFC4 /* Main.storyboard */,
+				E943C8FF2A1C391F0090DFC4 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E943C90F2A1C41F00090DFC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E943C90D2A1C41E10090DFC4 /* Heart.swift */,
+				E943C9112A1C449A0090DFC4 /* HeartCase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E943C9102A1C41FE0090DFC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E943C8F82A1C391D0090DFC4 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +179,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E943C8F92A1C391D0090DFC4 /* ViewController.swift in Sources */,
+				E943C9122A1C449A0090DFC4 /* HeartCase.swift in Sources */,
 				E943C8F52A1C391D0090DFC4 /* AppDelegate.swift in Sources */,
+				E943C90E2A1C41E10090DFC4 /* Heart.swift in Sources */,
 				E943C8F72A1C391D0090DFC4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,15 +327,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Heart Rate/Heart Rate.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Heart Rate/Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to share data.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to update data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,15 +357,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Heart Rate/Heart Rate.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Heart Rate/Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to share data.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to update data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
