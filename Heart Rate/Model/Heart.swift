@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Heart {
+struct Heart: Equatable {
     
     var background: UIColor
     var message: String

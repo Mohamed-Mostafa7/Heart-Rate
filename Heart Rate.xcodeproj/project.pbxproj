@@ -15,7 +15,19 @@
 		E943C9012A1C391F0090DFC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E943C8FF2A1C391F0090DFC4 /* LaunchScreen.storyboard */; };
 		E943C90E2A1C41E10090DFC4 /* Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E943C90D2A1C41E10090DFC4 /* Heart.swift */; };
 		E943C9122A1C449A0090DFC4 /* HeartCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E943C9112A1C449A0090DFC4 /* HeartCase.swift */; };
+		E943C91A2A1E64E90090DFC4 /* HeartRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E943C9192A1E64E90090DFC4 /* HeartRateTests.swift */; };
+		E943C9212A1E653F0090DFC4 /* HeartCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E943C9202A1E653F0090DFC4 /* HeartCaseTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E943C91B2A1E64E90090DFC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E943C8E92A1C391D0090DFC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E943C8F02A1C391D0090DFC4;
+			remoteInfo = "Heart Rate";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E943C8F12A1C391D0090DFC4 /* Heart Rate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heart Rate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,10 +41,20 @@
 		E943C90C2A1C3EA00090DFC4 /* Heart Rate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Heart Rate.entitlements"; sourceTree = "<group>"; };
 		E943C90D2A1C41E10090DFC4 /* Heart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heart.swift; sourceTree = "<group>"; };
 		E943C9112A1C449A0090DFC4 /* HeartCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartCase.swift; sourceTree = "<group>"; };
+		E943C9172A1E64E80090DFC4 /* HeartRateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartRateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E943C9192A1E64E90090DFC4 /* HeartRateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateTests.swift; sourceTree = "<group>"; };
+		E943C9202A1E653F0090DFC4 /* HeartCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E943C8EE2A1C391D0090DFC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E943C9142A1E64E80090DFC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				E943C8F32A1C391D0090DFC4 /* Heart Rate */,
+				E943C9182A1E64E90090DFC4 /* HeartRateTests */,
 				E943C8F22A1C391D0090DFC4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				E943C8F12A1C391D0090DFC4 /* Heart Rate.app */,
+				E943C9172A1E64E80090DFC4 /* HeartRateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +131,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E943C9182A1E64E90090DFC4 /* HeartRateTests */ = {
+			isa = PBXGroup;
+			children = (
+				E943C9192A1E64E90090DFC4 /* HeartRateTests.swift */,
+				E943C9202A1E653F0090DFC4 /* HeartCaseTests.swift */,
+			);
+			path = HeartRateTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +160,24 @@
 			productReference = E943C8F12A1C391D0090DFC4 /* Heart Rate.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E943C9162A1E64E80090DFC4 /* HeartRateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E943C91F2A1E64E90090DFC4 /* Build configuration list for PBXNativeTarget "HeartRateTests" */;
+			buildPhases = (
+				E943C9132A1E64E80090DFC4 /* Sources */,
+				E943C9142A1E64E80090DFC4 /* Frameworks */,
+				E943C9152A1E64E80090DFC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E943C91C2A1E64E90090DFC4 /* PBXTargetDependency */,
+			);
+			name = HeartRateTests;
+			productName = HeartRateTests;
+			productReference = E943C9172A1E64E80090DFC4 /* HeartRateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -139,6 +190,10 @@
 				TargetAttributes = {
 					E943C8F02A1C391D0090DFC4 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					E943C9162A1E64E80090DFC4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E943C8F02A1C391D0090DFC4;
 					};
 				};
 			};
@@ -156,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				E943C8F02A1C391D0090DFC4 /* Heart Rate */,
+				E943C9162A1E64E80090DFC4 /* HeartRateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +224,13 @@
 				E943C9012A1C391F0090DFC4 /* LaunchScreen.storyboard in Resources */,
 				E943C8FE2A1C391F0090DFC4 /* Assets.xcassets in Resources */,
 				E943C8FC2A1C391D0090DFC4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E943C9152A1E64E80090DFC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +249,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E943C9132A1E64E80090DFC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E943C9212A1E653F0090DFC4 /* HeartCaseTests.swift in Sources */,
+				E943C91A2A1E64E90090DFC4 /* HeartRateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E943C91C2A1E64E90090DFC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E943C8F02A1C391D0090DFC4 /* Heart Rate */;
+			targetProxy = E943C91B2A1E64E90090DFC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E943C8FA2A1C391D0090DFC4 /* Main.storyboard */ = {
@@ -382,6 +462,40 @@
 			};
 			name = Release;
 		};
+		E943C91D2A1E64E90090DFC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.san.HeartRateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heart Rate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Heart Rate";
+			};
+			name = Debug;
+		};
+		E943C91E2A1E64E90090DFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.san.HeartRateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heart Rate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Heart Rate";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,6 +513,15 @@
 			buildConfigurations = (
 				E943C9062A1C391F0090DFC4 /* Debug */,
 				E943C9072A1C391F0090DFC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E943C91F2A1E64E90090DFC4 /* Build configuration list for PBXNativeTarget "HeartRateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E943C91D2A1E64E90090DFC4 /* Debug */,
+				E943C91E2A1E64E90090DFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
